@@ -1,10 +1,20 @@
+<div align="center">
+
 # Laboratorio 1 - Matriz de 100.000 x 100.000 en disco
 
-**Estudiante:** Edwin A. Ruiz Ocampo
+**Estudiante:** Edwin A. Ruiz Ocampo - 1036778509
+
+**Profesor:** Edison Alejandro Montoya Gomez
 
 **Curso:** Estructuras de Datos y Lab
 
 **Universidad de Antioquia**
+
+<img width="171" height="245" alt="Universidad de Antioquia" src="https://github.com/user-attachments/assets/a002a27f-23fd-448c-816f-b580c01ac066" />
+
+</div>
+
+
 
 ## Descripción del problema
 
