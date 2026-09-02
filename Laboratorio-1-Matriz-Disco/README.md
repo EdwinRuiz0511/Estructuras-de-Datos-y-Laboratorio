@@ -10,6 +10,8 @@
 
 **Universidad de Antioquia**
 
+**Ingenieria de Sistemas**
+
 <img width="171" height="245" alt="Universidad de Antioquia" src="https://github.com/user-attachments/assets/a002a27f-23fd-448c-816f-b580c01ac066" />
 
 </div>
