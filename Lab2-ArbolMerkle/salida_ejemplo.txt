@@ -1,0 +1,58 @@
+
+===================================================
+1. CREACIÓN DE 5 TRANSACCIONES SIMULADAS
+===================================================
+1. TX1: Edwin paga 50000 a Carlos
+2. TX2: Carlos paga 20000 a Maria
+3. TX3: Maria paga 15000 a Edwin
+4. TX4: Edwin paga 100000 a Julian
+5. TX5: Julian paga 30000 a Carlos
+
+===================================================
+2. CONSTRUCCIÓN DEL ÁRBOL Y RAÍZ (MERKLE ROOT)
+===================================================
+Diagrama del árbol:
+
+RAÍZ   : [d30601cd...] 
+NIVEL 2 : [4bfdaa86...] [744f4667...] 
+NIVEL 1 : [26a966fc...] [3cde3d99...] [0cca3daf...] 
+HOJAS  : [3b4dda4f...] [b289ad2a...] [b439609c...] [41a4381b...] [c13b9303...] 
+
+Merkle Root original:
+d30601cdca98757cedf20c08aad0ebf140397b9a9a6d00c2e0e90e1bb9c4ce64
+
+===================================================
+3. MODIFICAR UNA TRANSACCIÓN -> LA RAÍZ DEBE CAMBIAR
+===================================================
+Transacción original : TX3: Maria paga 15000 a Edwin
+Transacción alterada  : TX3: Maria paga 999999999 a Edwin
+
+Merkle Root original  : d30601cdca98757cedf20c08aad0ebf140397b9a9a6d00c2e0e90e1bb9c4ce64
+Merkle Root modificado: e2051b665c6fd44fe90a05ca23f02ebd01e185956b1b9af12936074f078a1af3
+
+✔ Correcto: al cambiar UNA sola transacción, la raíz cambia por completo.
+
+===================================================
+4. PRUEBA DE INCLUSIÓN PARA LA TRANSACCIÓN 3
+===================================================
+Dato de la transacción 3: "TX3: Maria paga 15000 a Edwin"
+Prueba de inclusión generada (3 pasos):
+  -> hermano (DERECHA): 41a4381b9089...
+  -> hermano (IZQUIERDA): 26a966fc911f...
+  -> hermano (DERECHA): 744f46675bf9...
+
+===================================================
+5. VERIFICACIÓN CON DATO CORRECTO
+===================================================
+Verificando TX3 original contra la Merkle Root...
+Resultado: VÁLIDA ✔ (la transacción SÍ pertenece al árbol)
+
+===================================================
+6. VERIFICACIÓN CON DATO INCORRECTO (DEBE FALLAR)
+===================================================
+Verificando un dato ALTERADO ("TX3: Maria paga 15000000 a Edwin") contra la misma Merkle Root...
+Resultado: INVÁLIDA ✘ (correcto, la verificación falla como se esperaba)
+
+===================================================
+FIN DEL EXPERIMENTO
+===================================================
