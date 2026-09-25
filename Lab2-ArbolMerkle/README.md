@@ -72,11 +72,9 @@ Salida real de una ejecución: ver [`salida_ejemplo.txt`](./salida_ejemplo.txt).
 
 ## Capturas de pantalla
 
-<img width="796" height="125" alt="image" src="https://github.com/user-attachments/assets/4b909d36-cacd-4fb9-9e6b-d02267de2f1c" />
+<img width="542" height="109" alt="image" src="https://github.com/user-attachments/assets/ee61a2bf-7b7a-4fd8-96a8-cb914f9ec9e5" />
 
->
-> ![Verificación válida](./capturas/verificacion-valida.png)
-> ![Verificación inválida](./capturas/verificacion-invalida.png)
+<img width="796" height="125" alt="image" src="https://github.com/user-attachments/assets/4b909d36-cacd-4fb9-9e6b-d02267de2f1c" />
 
 ## Notas de diseño
 
