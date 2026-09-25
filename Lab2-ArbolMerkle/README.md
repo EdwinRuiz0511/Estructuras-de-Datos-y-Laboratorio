@@ -72,13 +72,8 @@ Salida real de una ejecución: ver [`salida_ejemplo.txt`](./salida_ejemplo.txt).
 
 ## Capturas de pantalla
 
-> Pendiente: al ejecutar `java Main` en tu equipo, toma **dos capturas**:
-> 1. La sección `5. VERIFICACIÓN CON DATO CORRECTO` mostrando `VÁLIDA ✔`.
-> 2. La sección `6. VERIFICACIÓN CON DATO INCORRECTO` mostrando `INVÁLIDA ✘`.
->
-> Guárdalas en una carpeta `capturas/` del repositorio (por ejemplo
-> `capturas/verificacion-valida.png` y `capturas/verificacion-invalida.png`)
-> y enlázalas aquí:
+<img width="796" height="125" alt="image" src="https://github.com/user-attachments/assets/4b909d36-cacd-4fb9-9e6b-d02267de2f1c" />
+
 >
 > ![Verificación válida](./capturas/verificacion-valida.png)
 > ![Verificación inválida](./capturas/verificacion-invalida.png)
