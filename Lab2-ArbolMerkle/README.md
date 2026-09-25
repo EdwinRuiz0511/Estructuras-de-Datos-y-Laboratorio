@@ -1,5 +1,4 @@
 <div align="center">
-
 # Laboratorio 2 — Árbol de Merkle
 
 **Estudiante:** Edwin A. Ruiz Ocampo - 1036778509
@@ -13,8 +12,8 @@
 **Ingenieria de Sistemas**
 
 <img width="171" height="245" alt="Universidad de Antioquia" src="https://github.com/user-attachments/assets/a002a27f-23fd-448c-816f-b580c01ac066" />
-
 </div>
+
 
 Implementación en Java de un **Árbol de Merkle** para el curso de Estructura de Datos.
 
