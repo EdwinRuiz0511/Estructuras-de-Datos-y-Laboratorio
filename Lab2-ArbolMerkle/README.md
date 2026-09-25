@@ -17,7 +17,7 @@
 </div>
 
 
-Implementación en Java de un **Árbol de Merkle** para el curso de Estructura de Datos.
+## Implementación en Java de un **Árbol de Merkle** para el curso de Estructura de Datos.
 
 ## Especificación implementada
 
