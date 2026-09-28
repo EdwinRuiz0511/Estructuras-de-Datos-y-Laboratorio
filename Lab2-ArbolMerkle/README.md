@@ -2,9 +2,7 @@
   
 # Laboratorio 2 — Árbol de Merkle
 
-**Estudiante:** Edwin A. Ruiz Ocampo - 1036778509
-
-**Profesor:** Edison Alejandro Montoya Gomez
+**Estudiante:** Edwin A. Ruiz Ocampo
 
 **Curso:** Estructuras de Datos y Lab
 
