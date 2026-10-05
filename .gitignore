@@ -32,3 +32,8 @@ matriz.dat
 matriz_fragmento.txt
 *.iml
 .idea/
+
+### Python ###
+__pycache__/
+*.pyc
+.venv/
