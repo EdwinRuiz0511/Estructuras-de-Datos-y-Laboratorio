@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Forzar UTF-8 en la salida para que tildes y símbolos se muestren bien
-        System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
+        //System.setOut(new PrintStream(System.out, true, StandardCharsets.UTF_8));
 
         separador("1. CREACIÓN DE 5 TRANSACCIONES SIMULADAS");
         List<String> transacciones = new ArrayList<>();
@@ -28,6 +28,8 @@ public class Main {
         System.out.println("\nMerkle Root original:");
         System.out.println(arbol.getRoot());
 
+        // ----------------------------------------------------------------------------------------------------------------------------------------
+
         separador("3. MODIFICAR UNA TRANSACCIÓN -> LA RAÍZ DEBE CAMBIAR");
         List<String> transaccionesModificadas = new ArrayList<>(transacciones);
         String original = transaccionesModificadas.get(2);
@@ -47,6 +49,8 @@ public class Main {
             System.out.println("\n✘ ERROR: la raíz no debería coincidir.");
         }
 
+        // -----------------------------------------------------------------------------------------------------------------------------------------
+
         separador("4. PRUEBA DE INCLUSIÓN PARA LA TRANSACCIÓN 3");
         int indiceTX3 = 2; // TX3 está en la posición 2 (0-based)
         List<ProofElement> proof = arbol.getProof(indiceTX3);
@@ -56,6 +60,9 @@ public class Main {
         for (ProofElement pe : proof) {
             System.out.println(pe);
         }
+
+        // -----------------------------------------------------------------------------------------------------------------------------------------
+
 
         separador("5. VERIFICACIÓN CON DATO CORRECTO");
         boolean esValida = MerkleTree.verifyProof(
@@ -67,6 +74,8 @@ public class Main {
         System.out.println("Resultado: " + (esValida ? "VÁLIDA ✔ (la transacción SÍ pertenece al árbol)"
                                                         : "INVÁLIDA ✘"));
 
+        // -----------------------------------------------------------------------------------------------------------------------------------------
+
         separador("6. VERIFICACIÓN CON DATO INCORRECTO (DEBE FALLAR)");
         String datoFalso = "TX3: Maria paga 15000000 a Edwin"; // dato manipulado por un atacante
         boolean esValidaFalsa = MerkleTree.verifyProof(
@@ -76,7 +85,11 @@ public class Main {
         );
         System.out.println("Verificando un dato ALTERADO (\"" + datoFalso + "\") contra la misma Merkle Root...");
         System.out.println("Resultado: " + (esValidaFalsa ? "VÁLIDA ✔ (ERROR, no debería pasar)"
+
                                                             : "INVÁLIDA ✘ (correcto, la verificación falla como se esperaba)"));
+
+        // -----------------------------------------------------------------------------------------------------------------------------------------
+
 
         separador("FIN DEL EXPERIMENTO");
     }

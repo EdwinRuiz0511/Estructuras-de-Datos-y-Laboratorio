@@ -85,17 +85,24 @@ public class MerkleTree {
         for (int level = 0; level < levels.size() - 1; level++) {
             List<MerkleNode> levelNodes = levels.get(level);
 
-            boolean isRightNode = (idx % 2 == 1);
-            int siblingIdx = isRightNode ? idx - 1 : idx + 1;
+            boolean nodoDerecho = (idx % 2 == 1);
 
-            // Caso de duplicado: si el hermano no existe, el hermano es el mismo nodo
-            if (siblingIdx >= levelNodes.size()) {
-                siblingIdx = idx;
+            int indiceHermano;
+
+            if (nodoDerecho) {
+                indiceHermano = idx - 1; // --> Izquierda
+            } else {
+                indiceHermano = idx + 1; // --> Derecha
             }
 
-            MerkleNode sibling = levelNodes.get(siblingIdx);
+            // Caso de duplicado: si el hermano no existe, el hermano es el mismo nodo
+            if (indiceHermano >= levelNodes.size()) {
+                indiceHermano = idx;
+            }
+
+            MerkleNode hermano = levelNodes.get(indiceHermano);
             // Si el nodo actual es el derecho, el hermano va a la izquierda al concatenar
-            proof.add(new ProofElement(sibling.getHash(), isRightNode));
+            proof.add(new ProofElement(hermano.getHash(), nodoDerecho));
 
             idx = idx / 2;
         }
