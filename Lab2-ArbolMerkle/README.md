@@ -1,6 +1,21 @@
+<div align="center">
+  
 # Laboratorio 2 — Árbol de Merkle
 
-Implementación en Java de un **Árbol de Merkle** para el curso de Estructura de Datos.
+**Estudiante:** Edwin A. Ruiz Ocampo
+
+**Curso:** Estructuras de Datos y Lab
+
+**Universidad de Antioquia**
+
+**Ingenieria de Sistemas**
+
+<img width="171" height="245" alt="Universidad de Antioquia" src="https://github.com/user-attachments/assets/a002a27f-23fd-448c-816f-b580c01ac066" />
+
+</div>
+
+
+## Implementación en Java de un **Árbol de Merkle** para el curso de Estructura de Datos.
 
 ## Especificación implementada
 
@@ -72,16 +87,9 @@ Salida real de una ejecución: ver [`salida_ejemplo.txt`](./salida_ejemplo.txt).
 
 ## Capturas de pantalla
 
-> Pendiente: al ejecutar `java Main` en tu equipo, toma **dos capturas**:
-> 1. La sección `5. VERIFICACIÓN CON DATO CORRECTO` mostrando `VÁLIDA ✔`.
-> 2. La sección `6. VERIFICACIÓN CON DATO INCORRECTO` mostrando `INVÁLIDA ✘`.
->
-> Guárdalas en una carpeta `capturas/` del repositorio (por ejemplo
-> `capturas/verificacion-valida.png` y `capturas/verificacion-invalida.png`)
-> y enlázalas aquí:
->
-> ![Verificación válida](./capturas/verificacion-valida.png)
-> ![Verificación inválida](./capturas/verificacion-invalida.png)
+<img width="542" height="109" alt="image" src="https://github.com/user-attachments/assets/ee61a2bf-7b7a-4fd8-96a8-cb914f9ec9e5" />
+
+<img width="796" height="125" alt="image" src="https://github.com/user-attachments/assets/4b909d36-cacd-4fb9-9e6b-d02267de2f1c" />
 
 ## Notas de diseño
 
