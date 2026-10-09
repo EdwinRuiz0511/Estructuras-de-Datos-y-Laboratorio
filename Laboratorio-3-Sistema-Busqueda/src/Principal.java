@@ -1,32 +1,37 @@
-import experimento.Estadisticas;
+import experimento.EscritorCSV;
+import experimento.Experimento;
+import java.io.IOException;
 
 public class Principal {
-    public static void main(String[] args) {
 
-        // Prueba 1: el ejemplo de la tabla.
-        double[] ejemplo = {2, 4, 4, 4, 5, 5, 7, 9};
-        System.out.println("Prueba 1");
-        System.out.println("Promedio: " + Estadisticas.calcularPromedio(ejemplo));
-        System.out.println("Desviacion estandar: " + Estadisticas.calcularDesviacionEstandar(ejemplo));
-        System.out.println("Mediana: " + Estadisticas.calcularMediana(ejemplo));
-        System.out.println("Q1: " + Estadisticas.calcularCuartil1(ejemplo));
-        System.out.println("Q3: " + Estadisticas.calcularCuartil3(ejemplo));
-        System.out.println("Atipicos: " + Estadisticas.contarAtipicos(ejemplo));
+    // "throws IOException" porque abrir el archivo CSV puede fallar.
+    public static void main(String[] args) throws IOException {
 
-        // Prueba 2: un valor muy distinto de los demas.
-        double[] conAtipico = {10, 11, 12, 13, 14, 15, 16, 17, 100};
-        System.out.println("Prueba 2");
-        System.out.println("Promedio con todos: " + Estadisticas.calcularPromedio(conAtipico));
-        System.out.println("Desviacion con todos: " + Estadisticas.calcularDesviacionEstandar(conAtipico));
-        System.out.println("Mediana: " + Estadisticas.calcularMediana(conAtipico));
-        System.out.println("Q1: " + Estadisticas.calcularCuartil1(conAtipico));
-        System.out.println("Q3: " + Estadisticas.calcularCuartil3(conAtipico));
-        System.out.println("Atipicos: " + Estadisticas.contarAtipicos(conAtipico));
+        // ---------- CONFIGURACIÓN (corrida real) ----------
+        int[] valoresN = {100, 500, 1000, 5000, 10000, 50000, 100000};
+        int m = 1000;
+        int repeticionesMedidas = 30;
+        int repeticionesCalentamiento = 3;
+        int capacidadBMas = 32;
+        long semillaBase = 1000;
+        String rutaArchivo = "datos/resultados/resultados_busqueda.csv";
+        // --------------------------------------------------
 
-        double[] sinAtipicos = Estadisticas.quitarAtipicos(conAtipico);
-        System.out.println("Valores restantes: " + sinAtipicos.length);
-        System.out.println("Promedio sin atipicos: " + Estadisticas.calcularPromedio(sinAtipicos));
-        System.out.println("Desviacion sin atipicos: " + Estadisticas.calcularDesviacionEstandar(sinAtipicos));
-        System.out.println("Original intacto, longitud: " + conAtipico.length);
+        EscritorCSV escritor = new EscritorCSV(rutaArchivo);
+        Experimento experimento = new Experimento(escritor, capacidadBMas,
+                repeticionesCalentamiento);
+
+        long inicioTotal = System.nanoTime();
+        for (int i = 0; i < valoresN.length; i++) {
+            System.out.println("Iniciando N=" + valoresN[i]);
+            experimento.ejecutarParaTamano(valoresN[i], m, repeticionesMedidas, semillaBase);
+            escritor.guardar();
+            System.out.println("Terminado N=" + valoresN[i]);
+        }
+        escritor.cerrar();
+
+        long segundos = (System.nanoTime() - inicioTotal) / 1000000000L;
+        System.out.println("Experimento terminado en " + segundos + " segundos.");
+        System.out.println("Resultados en: " + rutaArchivo);
     }
 }
