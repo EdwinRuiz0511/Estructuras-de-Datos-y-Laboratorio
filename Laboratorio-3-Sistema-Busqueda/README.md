@@ -63,7 +63,7 @@ Laboratorio-3-Sistema-Busqueda/
 
 ---
 
-## 💻 Hardware y software
+## Hardware y software
 
 ### Hardware
 - **Procesador:** Intel(R) Core(TM) i3-1005G1 (2 núcleos, 4 hilos)
