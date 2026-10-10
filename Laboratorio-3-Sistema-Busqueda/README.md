@@ -8,6 +8,7 @@ Comparación experimental de tres estructuras de datos (Lista, Árbol Binario de
 
 ## Estructura del proyecto
 
+```text
 Laboratorio-3-Sistema-Busqueda/
 ├── datos/
 │   └── resultados/
@@ -29,8 +30,8 @@ Laboratorio-3-Sistema-Busqueda/
 │   ├── Principal.java                   (experimento de búsqueda)
 │   └── PrincipalResumen.java            (análisis estadístico)
 ├── README.md
-├── CODIGO_DE_HONOR.md
-└── MATERIAL_SUSTENTACION.md
+└── CODIGO_DE_HONOR.md
+```
 
 ---
 
@@ -62,7 +63,7 @@ Laboratorio-3-Sistema-Busqueda/
 
 ---
 
-## Hardware y software
+## 💻 Hardware y software
 
 ### Hardware
 - **Procesador:** Intel(R) Core(TM) i3-1005G1 (2 núcleos, 4 hilos)
@@ -149,7 +150,10 @@ Laboratorio-3-Sistema-Busqueda/
 ### Pasos
 
 1. **Clonar el repositorio:**
-   git clone https://github.com/EdwinRuiz0511/Estructuras-de-Datos-y-Laboratorio.git
+
+```bash
+git clone https://github.com/EdwinRuiz0511/Estructuras-de-Datos-y-Laboratorio.git
+```
 
 2. **Ejecutar el experimento (Java):**
    - Abrir el proyecto en IntelliJ.
@@ -162,7 +166,11 @@ Laboratorio-3-Sistema-Busqueda/
    - Se genera `datos/resultados/resumen_busqueda.csv`.
 
 4. **Generar las gráficas (Python):**
-   python scripts/graficar.py
+
+```bash
+python scripts/graficar.py
+```
+
    - Se generan los 4 PNG en `graficas/`.
 
 ---
