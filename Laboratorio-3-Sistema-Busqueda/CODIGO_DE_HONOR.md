@@ -25,20 +25,11 @@ Para la elaboración de este laboratorio, utilicé **asistentes de IA** como apo
 - **Redacción de documentación:** estructura del README, guía de sustentación.
 - **Depuración:** resolución de errores de compilación y ejecución.
 
-### Áreas donde NO se usó la IA
-- **Implementación del código Java:** todas las clases (`Estudiante`, `ListaEstudiantes`, `ArbolABB`, `ArbolBMas`, `Estadisticas`, `MedidorTiempo`, `Experimento`, etc.) fueron escritas por mí, siguiendo las guías y comprendiendo cada línea.
-- **Ejecución del experimento:** las corridas se hicieron en mi computador personal.
-- **Toma de decisiones:** las decisiones de diseño (semilla, capacidad del B+, número de repeticiones) fueron tomadas por mí, comprendiendo las implicaciones.
-
 ### Declaración sobre el uso de IA
 Entiendo que el uso de IA como **herramienta de apoyo** es válido siempre que:
 1. **Se declare explícitamente** (como hago aquí).
 2. **No reemplace mi aprendizaje** (comprendo cada concepto y cada línea de código).
 3. **No se presente como trabajo propio** lo que la IA generó directamente.
-
-**Compromiso:** puedo explicar y defender **cualquier parte del código y de la documentación** ante el profesor durante la sustentación.
-
----
 
 ## Fuentes consultadas
 
